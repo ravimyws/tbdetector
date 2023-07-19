@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../registration/RegistrationForm.dart';
-import './LoginForm.dart';
+
+import '../../providers/GoogleSignInProvider.dart';
 
 class LoginPage extends StatelessWidget {
+  final GoogleSignInProvider _googleSignInProvider = GoogleSignInProvider();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +21,7 @@ class LoginPage extends StatelessWidget {
 
             _buildLoginButton(context),
             _buildRegisterButton(context),
+            _buildGoogleSignInButton(context),
           ],
         ),
       ),
@@ -26,23 +29,10 @@ class LoginPage extends StatelessWidget {
   }
 
   void _navigateToLoginForm(BuildContext context) {
-    /* Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => LoginForm(),
-      ),
-    ); */
     Navigator.pushNamed(context, '/login');
   }
 
   void _navigateToRegistrationForm(BuildContext context) {
-    /* Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => RegistrationForm(),
-      ),
-    ); */
-
     Navigator.pushNamed(context, '/registration');
   }
 
@@ -62,6 +52,27 @@ class LoginPage extends StatelessWidget {
         _navigateToRegistrationForm(context);
       },
       child: Text('Register'),
+    );
+  }
+
+  Widget _buildGoogleSignInButton(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () async {
+        final navigator = Navigator.of(context);
+        User? user = await _googleSignInProvider.signInWithGoogle();
+        print(user);
+
+        if (user != null) {
+          // Handle successful sign-in
+          print('Signed in as: ${user.displayName}');
+
+          navigator.pushReplacementNamed('/home');
+        } else {
+          // Handle sign-in failure
+          print('Sign-in failed.');
+        }
+      },
+      child: Text('Sign in with Google'),
     );
   }
 }

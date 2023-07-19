@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '464956154250',
     projectId: 'tbdetector-65a03',
     storageBucket: 'tbdetector-65a03.appspot.com',
+    androidClientId: '464956154250-p59g5ik1c1cev9nkeqaeseo7e43r530c.apps.googleusercontent.com',
     iosClientId: '464956154250-7ejj86afvnajm2d1j3kgpt8ktm7u03p2.apps.googleusercontent.com',
     iosBundleId: 'com.example.tbdetect',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '464956154250',
     projectId: 'tbdetector-65a03',
     storageBucket: 'tbdetector-65a03.appspot.com',
+    androidClientId: '464956154250-p59g5ik1c1cev9nkeqaeseo7e43r530c.apps.googleusercontent.com',
     iosClientId: '464956154250-j45n8cfjhmv61nvrp2dlp94m2dp705pl.apps.googleusercontent.com',
     iosBundleId: 'com.example.tbdetect.RunnerTests',
   );
