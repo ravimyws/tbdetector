@@ -17,8 +17,8 @@ class _LoginFormState extends State<LoginForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Form(
+    return Scaffold(
+      body: Form(
         key: _formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,15 +54,14 @@ class _LoginFormState extends State<LoginForm> {
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   try {
+                    final navigator = Navigator.of(context);
                     final userCredential =
                         await _auth.signInWithEmailAndPassword(
                       email: _emailController.text,
                       password: _passwordController.text,
                     );
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
+                    print(userCredential);
+                    navigator.pushReplacementNamed('/home');
                   } on FirebaseAuthException catch (e) {
                     setState(() {
                       _errorMessage = e.message;

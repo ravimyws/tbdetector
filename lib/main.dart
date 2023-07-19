@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:tbdetect/app_routes.dart';
 import 'package:tbdetect/firebase_options.dart';
 
 import 'widgets/login/LoginPage.dart';
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      //home: LoginPage(),
+      routes: appRoutes,
     );
   }
 }

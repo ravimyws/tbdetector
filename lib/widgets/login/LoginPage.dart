@@ -26,21 +26,24 @@ class LoginPage extends StatelessWidget {
   }
 
   void _navigateToLoginForm(BuildContext context) {
-    Navigator.push(
+    /* Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => LoginForm(),
       ),
-    );
+    ); */
+    Navigator.pushNamed(context, '/login');
   }
 
   void _navigateToRegistrationForm(BuildContext context) {
-    Navigator.push(
+    /* Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => RegistrationForm(),
       ),
-    );
+    ); */
+
+    Navigator.pushNamed(context, '/registration');
   }
 
   Widget _buildLoginButton(BuildContext context) {

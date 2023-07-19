@@ -54,15 +54,14 @@ class _RegistrationFormState extends State<RegistrationForm> {
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   try {
+                    final navigator = Navigator.of(context);
                     final userCredential =
                         await _auth.createUserWithEmailAndPassword(
                       email: _emailController.text,
                       password: _passwordController.text,
                     );
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
+                    print(userCredential);
+                    navigator.pushReplacementNamed('/home');
                   } on FirebaseAuthException catch (e) {
                     setState(() {
                       _errorMessage = e.message;
