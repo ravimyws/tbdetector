@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../registration/RegistrationForm.dart';
+import './LoginForm.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -27,7 +29,16 @@ class LoginPage extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => Container(),
+        builder: (context) => LoginForm(),
+      ),
+    );
+  }
+
+  void _navigateToRegistrationForm(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => RegistrationForm(),
       ),
     );
   }
@@ -45,6 +56,7 @@ class LoginPage extends StatelessWidget {
     return TextButton(
       onPressed: () {
         // Handle register button click
+        _navigateToRegistrationForm(context);
       },
       child: Text('Register'),
     );

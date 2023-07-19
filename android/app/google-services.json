@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "464956154250",
+    "project_id": "tbdetector-65a03",
+    "storage_bucket": "tbdetector-65a03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464956154250:android:25b707099eee30ee9d2873",
+        "android_client_info": {
+          "package_name": "com.example.tbdetect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464956154250-c7to8ce4aehtfpjv4g8lnuchcn6oiju5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6DMjc4RbtwePJFSxZrXnm6cwmhANXxDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464956154250-c7to8ce4aehtfpjv4g8lnuchcn6oiju5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "464956154250-7ejj86afvnajm2d1j3kgpt8ktm7u03p2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tbdetect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
