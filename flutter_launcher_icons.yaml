@@ -1,0 +1,5 @@
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/android/app_icon.png"
+  adaptive_icon_background: "#673AB7"
+  adaptive_icon_foreground: "assets/android/app_icon.png"

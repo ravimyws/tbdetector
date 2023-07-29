@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../providers/GoogleSignInProvider.dart';
+import '../../providers/google_sign_in_provider.dart';
 
 class LoginPage extends StatelessWidget {
   final GoogleSignInProvider _googleSignInProvider = GoogleSignInProvider();
